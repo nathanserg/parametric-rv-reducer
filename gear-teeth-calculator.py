@@ -14,7 +14,7 @@ cycloidal_roller_diameter = 4    # Diameter of the cycloidal rollers
 cycloidal_min_wall_thickness = 1.5  # Minimum wall thickness between the lobes of the disk and the inside diameter of the disk
 
 ############### Gears parameters ###############
-unit_gear_ratio = True      # True if you want to include the unit gear ratio (1:1) in the results
+unit_gear_ratio = False      # True if you want to include the unit gear ratio (1:1) in the results
 
 nb_planets = 3              # Number of planets
 gear_modulus = 1            # Module of the gears
