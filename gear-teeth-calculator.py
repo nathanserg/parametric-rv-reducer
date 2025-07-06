@@ -1,18 +1,19 @@
+from rich.console import Console
+from rich.table import Table
+
 
 ############### Parameters range ###############
-cycloidal_values = range(8, 51) # Cycloidal reduction ratio
-planet_values = range(12, 41)   # Planet gear teeth
-sun_values = range(12, 41)      # Sun gear teeth
+cycloidal_values = range(8, 101) # Cycloidal reduction ratio
+planet_values = range(12, 101)   # Planet gear teeth range
+sun_values = range(12, 101)      # Sun gear teeth range
 
 ############### Cycloidal parameters ###############
 cycloidal_excentricity = 0.85       # Excentricity of the cycloidal drive
 cycloidal_diameter = 65             # Base diameter of the cycloidal disk
-cycloidal_roller_diameter = 3.95    # Diameter of the cycloidal rollers
+cycloidal_roller_diameter = 4    # Diameter of the cycloidal rollers
 cycloidal_min_wall_thickness = 1.5  # Minimum wall thickness between the lobes of the disk and the inside diameter of the disk
 
 ############### Gears parameters ###############
-unit_gear_ratio = True      # True if you want to include the unit gear ratio (1:1) in the results
-
 nb_planets = 3              # Number of planets
 gear_modulus = 1            # Module of the gears
 gear_minimum_modulus = 0.9  # Minimum module of the gears you can print
@@ -21,7 +22,8 @@ gear_dist_to_disk = 1       # Distance from the gear to the inside of the cycloi
 ############### Filters ###############
 R_min = 28                      # Minimum reduction ratio
 R_max = 32                      # Maximum reduction ratio
-filter_by_given_modulus = False # True if you want to filter by gear_modulus, False if you want to filter by maximum gear modulus
+filter_by_given_modulus = True # True if you want to filter by gear_modulus, False if you want to filter by maximum gear modulus
+unit_gear_ratio = False      # True if you want to include the unit gear ratio (1:1) in the results
 
 
 def get_all_combinations(cycloidal_values, planet_values, sun_values, R_min, R_max, unit_gear_ratio):
@@ -89,8 +91,22 @@ else:
 print(len(valid_results), "valid combinations found")
 print(f"cycloidal inside diameter = {cycloidal_inside_diam:.2f} mm\n")
 
-for combo in valid_results:
-    if len(combo) == 5:
-        print(f"cycloid ratio = {combo[0]}, planet nb teeth = {combo[1]}, sun nb teeth = {combo[2]}, total ratio = {combo[3]}, max gear modulus = {combo[4]:.2f}, gear ratio = {combo[1]/combo[2]:.2f}")
+table = Table(title="Combinations")
+
+if len(valid_results[0]) == 5:
+    columns = ["cycloid ratio", "planet teeth", "sun teeth", "total ratio", "max gear modulus", "gear ratio"]
+else:
+    columns = ["cycloid ratio", "planet teeth", "sun teeth", "total ratio", "gear ratio"]
+
+for column in columns:
+    table.add_column(column)
+
+for combination in valid_results:
+    if len(combination) == 5:
+        row = [str(combination[0]), str(combination[1]), str(combination[2]), str(combination[3]), f"{combination[4]:.2f}", f"{combination[1]/combination[2]:.2f}"]
     else:
-        print(f"cycloid ratio = {combo[0]}, planet nb teeth = {combo[1]}, sun nb teeth = {combo[2]}, total ratio = {combo[3]}, gear ratio = {combo[1]/combo[2]:.2f}")
+        row = [str(combination[0]), str(combination[1]), str(combination[2]), str(combination[3]), f"{combination[1]/combination[2]:.2f}"]
+    table.add_row(*row, style='bright_blue')
+
+console = Console()
+console.print(table)
