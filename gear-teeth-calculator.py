@@ -3,9 +3,9 @@ from rich.table import Table
 
 
 ############### Parameters range ###############
-cycloidal_values = range(8, 51) # Cycloidal reduction ratio
-planet_values = range(12, 41)   # Planet gear teeth range
-sun_values = range(12, 41)      # Sun gear teeth range
+cycloidal_values = range(8, 101) # Cycloidal reduction ratio
+planet_values = range(12, 101)   # Planet gear teeth range
+sun_values = range(12, 101)      # Sun gear teeth range
 
 ############### Cycloidal parameters ###############
 cycloidal_excentricity = 0.85       # Excentricity of the cycloidal drive
@@ -14,8 +14,6 @@ cycloidal_roller_diameter = 4    # Diameter of the cycloidal rollers
 cycloidal_min_wall_thickness = 1.5  # Minimum wall thickness between the lobes of the disk and the inside diameter of the disk
 
 ############### Gears parameters ###############
-unit_gear_ratio = False      # True if you want to include the unit gear ratio (1:1) in the results
-
 nb_planets = 3              # Number of planets
 gear_modulus = 1            # Module of the gears
 gear_minimum_modulus = 0.9  # Minimum module of the gears you can print
@@ -24,7 +22,8 @@ gear_dist_to_disk = 1       # Distance from the gear to the inside of the cycloi
 ############### Filters ###############
 R_min = 28                      # Minimum reduction ratio
 R_max = 32                      # Maximum reduction ratio
-filter_by_given_modulus = False # True if you want to filter by gear_modulus, False if you want to filter by maximum gear modulus
+filter_by_given_modulus = True # True if you want to filter by gear_modulus, False if you want to filter by maximum gear modulus
+unit_gear_ratio = False      # True if you want to include the unit gear ratio (1:1) in the results
 
 
 def get_all_combinations(cycloidal_values, planet_values, sun_values, R_min, R_max, unit_gear_ratio):
