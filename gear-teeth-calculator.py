@@ -107,7 +107,7 @@ for combination in valid_results:
         row = [str(combination[0]), str(combination[1]), str(combination[2]), str(combination[3]), f"{combination[4]:.2f}", f"{combination[1]/combination[2]:.2f}"]
     else:
         row = [str(combination[0]), str(combination[1]), str(combination[2]), str(combination[3]), f"{combination[1]/combination[2]:.2f}"]
-    table.add_row(*row, style='bright_green')
+    table.add_row(*row, style='bright_blue')
 
 console = Console()
 console.print(table)
