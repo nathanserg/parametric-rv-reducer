@@ -102,14 +102,10 @@ else:
 for column in columns:
     table.add_column(column)
 
-
-
 for combination in valid_results:
     if len(combination) == 5:
-        #print(f"cycloid ratio = {combination[0]}, planet nb teeth = {combination[1]}, sun nb teeth = {combination[2]}, total ratio = {combination[3]}, max gear modulus = {combination[4]:.2f}, gear ratio = {combination[1]/combination[2]:.2f}")
         row = [str(combination[0]), str(combination[1]), str(combination[2]), str(combination[3]), f"{combination[4]:.2f}", f"{combination[1]/combination[2]:.2f}"]
     else:
-        #print(f"cycloid ratio = {combination[0]}, planet nb teeth = {combination[1]}, sun nb teeth = {combination[2]}, total ratio = {combination[3]}, gear ratio = {combination[1]/combination[2]:.2f}")
         row = [str(combination[0]), str(combination[1]), str(combination[2]), str(combination[3]), f"{combination[1]/combination[2]:.2f}"]
     table.add_row(*row, style='bright_green')
 
