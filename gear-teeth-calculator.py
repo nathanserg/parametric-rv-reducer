@@ -1,8 +1,8 @@
 
 ############### Parameters range ###############
 cycloidal_values = range(8, 51) # Cycloidal reduction ratio
-planet_values = range(12, 41)   # Planet gear teeth
-sun_values = range(12, 41)      # Sun gear teeth
+planet_values = range(12, 41)   # Planet gear teeth range
+sun_values = range(12, 41)      # Sun gear teeth range
 
 ############### Cycloidal parameters ###############
 cycloidal_excentricity = 0.85       # Excentricity of the cycloidal drive
