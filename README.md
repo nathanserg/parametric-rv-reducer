@@ -10,7 +10,7 @@ Here are examples of RV reducers:
 ## Main project
 ![Picture of a RV reducer created with this Onshape document](docs/pictures/rv-reducer.jpg)
 
-Progress : ![](https://geps.dev/progress/80)  
+![](https://geps.dev/progress/80)  
 Here is the link to the main [Onshape project](https://cad.onshape.com/documents/2b52985c37cc494e3507f282/w/50bf925fc91c4350ebe27855/e/7928599eb972c3e2a49f81f0?renderMode=0&uiState=686a6db617a27d4a00ee71ca)  
 The first draft of the main document is almost finished.
 
@@ -19,5 +19,11 @@ This first document is an RV reducer that uses:
 - metal bearing balls and 3d printed bearing race to replace costly and overkill large bearing
 
 
-## How to customize to your needs
-Progress : ![](https://geps.dev/progress/0)
+## To Do
+
+| Progress | Tasks |
+| --- | --- |
+| ![](https://geps.dev/progress/10) | Add python calculator documentation |
+| ![](https://geps.dev/progress/0) | Add overall documentation |
+| ![](https://geps.dev/progress/0) | Weight optimization |
+| ![](https://geps.dev/progress/0) | Adding housing mounting options |
