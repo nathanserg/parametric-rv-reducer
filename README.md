@@ -9,8 +9,8 @@ Here are examples of RV reducers:
 
 ## Main project
 ![](https://geps.dev/progress/90)  
-Here is the link to the main [Onshape project](https://cad.onshape.com/documents/2b52985c37cc494e3507f282/w/50bf925fc91c4350ebe27855/e/504b8f540f64a8a743b4b3a6?renderMode=0&uiState=686a650a17a27d4a00ee52db)
-The first draft of the main document is almost finished
+Here is the link to the main [Onshape project](https://cad.onshape.com/documents/2b52985c37cc494e3507f282/w/50bf925fc91c4350ebe27855/e/504b8f540f64a8a743b4b3a6?renderMode=0&uiState=686a650a17a27d4a00ee52db)  
+The first draft of the main document is almost finished.
 
 ## How to customize to your needs
 ![](https://geps.dev/progress/0)  
