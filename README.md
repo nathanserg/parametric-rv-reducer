@@ -19,11 +19,11 @@ This first document is an RV reducer that uses:
 - metal bearing balls and 3d printed bearing race to replace costly and overkill large bearing
 
 
-## To Do
+## To Do
 
 | Progress | Tasks |
 | --- | --- |
 | ![](https://geps.dev/progress/10) | Add python calculator documentation |
-| ![](https://geps.dev/progress/10) | Add overall documentation |
+| ![](https://geps.dev/progress/0) | Add overall documentation |
 | ![](https://geps.dev/progress/0) | Weight optimization |
 | ![](https://geps.dev/progress/0) | Adding housing mounting options |
